@@ -6,11 +6,11 @@ async function getUser(param: string) {
 }
 
 
-export default async function DetailUser({ params }: { params: { slug: string } }) {
-    const data = await getUser(params.slug)
+export default async function DetailUser({ params }: { params: { uasername: string } }) {
+    const data = await getUser(params.uasername)
     return (
         <div>
-            <p>DetailUser : {params.slug}</p>
+            <p>DetailUser : {params.uasername}</p>
             <div>
                 {JSON.stringify(data)}
             </div>
