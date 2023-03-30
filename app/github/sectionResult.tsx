@@ -24,7 +24,6 @@ export default function SectionResult({ query }: Props) {
                 {loading && "please wait.."}
                 {data && data.items.map((user: any, index: number) => {
                     return <div key={index} className='place-self-center'>
-                        <Image src={user.avatar_url} alt={'image'} />
                         <p>{user.login}</p>
                     </div>
                 })}
