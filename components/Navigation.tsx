@@ -33,15 +33,15 @@ export default function Navigation() {
         },
         {
             name: 'Instagram',
-            link: '/dashboard',
+            link: '/instagram',
         },
         {
             name: 'Facebook',
-            link: '/blog',
+            link: '/facebook',
         },
         {
             name: 'Github',
-            link: '/userGithub',
+            link: '/github',
         },
     ]
 
@@ -53,7 +53,7 @@ export default function Navigation() {
 
     return (
         <header className='border-b border-zinc-200 py-2'>
-            <div className='flex items-center relative justify-between xl:max-w-7xl xl:mx-auto max-w-full px-[8%] flex-wrap w-full'>
+            <div className='flex items-center relative justify-between xl:max-w-7xl xl:mx-auto max-w-full flex-wrap w-full'>
                 <Image src="/img/logo/logoRemoveBg.png" alt='Img' width={110} height={110} />
 
                 <div className='cursor-pointer lg:hidden block' onClick={() => buka()}>

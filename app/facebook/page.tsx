@@ -1,10 +1,10 @@
 import React from 'react'
 // import SectionProfile from './sectionProfile'
 
-export default function Blog() {
+export default function Facebook() {
     return (
         <div>
-            Halaman Blog
+            Halaman Facebook
             {/* <SectionProfile /> */}
         </div>
     )

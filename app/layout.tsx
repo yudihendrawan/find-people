@@ -4,7 +4,10 @@ import Link from 'next/link'
 import './globals.css'
 
 export const metadata = {
-  title: 'Home Page',
+  title: {
+    default: 'Find People',
+    template: '%s | Find People '
+  },
   description: 'Find Social Media Users',
 }
 
@@ -19,9 +22,13 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body>
-        <div className='container mx-auto'>
+        <div className='justify-center flex flex-col container mx-auto '>
+
           <Navigation />
-          {children}
+
+          <div className='place-self-center mt-10'>
+            {children}
+          </div>
         </div>
       </body>
     </html>
