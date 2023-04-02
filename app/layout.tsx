@@ -25,7 +25,7 @@ export default function RootLayout({
         <div className='mx-auto'>
           <Navigation />
         </div>
-        <div className='min-h-screen w-screen bg-white justify-center flex mt-20'>
+        <div className='min-h-screen w-screen bg-white justify-center lg:flex mt-20'>
 
           {children}
         </div>
