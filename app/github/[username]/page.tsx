@@ -1,23 +1,22 @@
-import React from 'react'
+'use client'
+import { useState, useEffect } from 'react'
 
-async function getData(params: string) {
-    const res = await fetch(`https://api.github.com/users/${params}`)
-    // const data = await res.json()
-    return res.json()
+export default function Detail({ params }: { params: { username: string } }) {
+    const [data, setData] = useState(null)
 
-}
-
-export default async function Detail({ params }: { params: { username: string } }) {
-    const data = await getData(params.username)
+    useEffect(() => {
+        async function getData() {
+            const res = await fetch(`https://api.github.com/users/${params.username}`)
+            const data = await res.json()
+            setData(data)
+        }
+        getData()
+    }, [params.username])
 
     return (
         <div>
-            <p>
-                Detail: {params.username}
-            </p>
-            <div>
-                {JSON.stringify(data, null, 2)}
-            </div>
+            <p>Detail: {params.username}</p>
+            <div>{data && JSON.stringify(data, null, 2)}</div>
         </div>
     )
 }

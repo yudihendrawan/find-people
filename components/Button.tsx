@@ -5,7 +5,7 @@ export default function Button({ type, isLoading }: Props) {
     const Loading = () => {
         return (
             <div className='flex justify-center'>
-                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white'></div>
+                <div className='animate-spin rounded-full h-6 w-6 lg:h-8 lg:w-8 border-b-2 border-white'></div>
             </div>
         )
     }
