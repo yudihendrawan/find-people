@@ -13,7 +13,7 @@ interface Props {
 
 export default function SectionResult({ query }: Props) {
 
-    const { data, error } = useSWR(` https://api.github.com/search/users?q=${query}`, fetcher)
+    const { data, error } = useSWR(` https://api.github.com/search/users?q=${query}&per_page=20`, fetcher)
 
     let loading = !data && !error
 

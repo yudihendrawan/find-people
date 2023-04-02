@@ -22,14 +22,15 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body>
-        <div className='justify-center flex flex-col container mx-auto '>
-
+        <div className='mx-auto'>
           <Navigation />
-
-          <div className='place-self-center mt-10'>
-            {children}
-          </div>
         </div>
+        <div className='min-h-screen w-screen bg-white justify-center flex mt-20'>
+
+          {children}
+        </div>
+
+
       </body>
     </html>
   )
