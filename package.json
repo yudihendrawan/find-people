@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "minifycss": "npx tailwindcss -o app/globals.css --minify"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
