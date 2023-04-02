@@ -3,10 +3,10 @@ import { UserGithub } from '@/types/userGithub/UserGithub'
 import React from 'react'
 import UserItem from './UserItem'
 
-export default function UserList({ result, searchResult }: Props) {
+export default function UserList({ result, searchResult, resultQuery }: Props) {
     return (
-        <div className='border rounded-md w-full py-10'>
-            <p className='text-center p-3'>Hasil Pencarian : <span className='font-bold'>{searchResult}</span></p>
+        <div className='border shadow-md rounded-md w-full py-10'>
+            <p className='text-center p-3'>Hasil Pencarian : <span className='font-bold'>{searchResult}</span> (total : {resultQuery}) </p>
             {result?.users.map((user, index) =>
                 <UserItem key={index} user={user} />
             )}
@@ -17,4 +17,5 @@ export default function UserList({ result, searchResult }: Props) {
 interface Props {
     result?: SearchRes
     searchResult: string
+    resultQuery: string
 }
