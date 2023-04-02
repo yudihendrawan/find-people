@@ -10,6 +10,7 @@ import { SearchRes } from '@/types/userGithub/SearchRes'
 
 
 export default function Github(): JSX.Element {
+  const [resultQuery, setResultQuery] = useState('')
   const [searchResult, setSearchResult] = useState('')
   const [search, setSearch] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -28,6 +29,7 @@ export default function Github(): JSX.Element {
             search: search,
             users: users
           }
+          setResultQuery(JSON.stringify(data.total_count))
           setResult(searchRes)
         }).finally(() => {
           setIsLoading(false)
@@ -38,13 +40,13 @@ export default function Github(): JSX.Element {
   }
 
   return (
-    <div className='justify-center space-y-3 mt-10 lg:flex lg:w-[500px] lg:items-center lg:flex-col'>
+    <div className='justify-center space-y-3 mt-10 lg:flex lg:w-[500px] lg:items-center lg:flex-col items-center'>
       <Banner />
-      <form className='flex place-self-center  lg:w-full' onSubmit={onSearchSubmit} >
+      <form className='flex place-self-center w-full mx-auto ' onSubmit={onSearchSubmit} >
         <FormSearch value={search} onChange={(e) => setSearch(e.target.value)} />
         <Button type='submit' isLoading={isLoading} />
       </form>
-      {result && <UserList result={result} searchResult={searchResult} />}
+      {result && <UserList result={result} searchResult={searchResult} resultQuery={resultQuery} />}
     </div>
   )
 }

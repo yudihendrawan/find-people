@@ -1,7 +1,6 @@
 import Navigation from '@/components/Navigation'
-import Head from 'next/head'
-import Link from 'next/link'
 import './globals.css'
+// import './style.css'
 
 export const metadata = {
   title: {
@@ -22,10 +21,10 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body>
-        <div className='mx-auto'>
+        <div className='mx-auto mb-28 lg:mb-24'>
           <Navigation />
         </div>
-        <div className='min-h-screen w-screen bg-white justify-center lg:flex mt-20'>
+        <div className='min-h-screen w-screen bg-white justify-center flex'>
 
           {children}
         </div>
