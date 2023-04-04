@@ -1,4 +1,4 @@
-import { UserGithub } from '@/types/userGithub/UserGithub'
+import { UserGithub } from '@/types/userGithub/User'
 import React from 'react'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'

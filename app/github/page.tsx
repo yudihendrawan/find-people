@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
-import FormSearch from '@/components/Form'
+import FormSearch from '@/components/FormSearch'
 import Button from '@/components/Button'
 import UserList from '@/components/UserList'
 import Banner from '@/components/Banner'
-import { UserGithub } from '@/types/userGithub/UserGithub'
+import { UserGithub } from '@/types/userGithub/User'
 import { SearchRes } from '@/types/userGithub/SearchRes'
 
 
@@ -29,6 +29,8 @@ export default function Github(): JSX.Element {
             search: search,
             users: users
           }
+          // console.log(data)
+          console.log(searchRes.users)
           setResultQuery(JSON.stringify(data.total_count))
           setResult(searchRes)
         }).finally(() => {
@@ -40,8 +42,8 @@ export default function Github(): JSX.Element {
   }
 
   return (
-    <div className='justify-center space-y-3 mt-10 lg:flex lg:w-[500px] lg:items-center lg:flex-col items-center'>
-      <Banner />
+    <div className='justify-center space-y-3 mt-10 lg:flex lg:w-[500px]  lg:items-center lg:flex-col items-center'>
+      <Banner title='Github' logo='/img/banner/github.svg' size='lg:h-32 lg:w-32 h-24 w-24' />
       <form className='flex place-self-center w-full mx-auto ' onSubmit={onSearchSubmit} >
         <FormSearch value={search} onChange={(e) => setSearch(e.target.value)} />
         <Button type='submit' isLoading={isLoading} />

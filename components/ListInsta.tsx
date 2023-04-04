@@ -1,21 +1,21 @@
-import { SearchRes } from '@/types/userGithub/SearchRes'
-import { UserGithub } from '@/types/userGithub/User'
+import { InstaRes } from '@/types/userGithub/SearchRes'
+import { UserInstagram } from '@/types/userGithub/User'
 import React from 'react'
-import UserItem from './UserItem'
+import ItemInsta from './ItemInsta'
 
-export default function UserList({ result, searchResult, resultQuery }: Props) {
+export default function ListInsta({ result, searchResult, resultQuery }: Props) {
     return (
         <div className='border shadow-md rounded-md w-full py-10'>
             <p className='text-center p-3'>Hasil Pencarian : <span className='font-bold'>{searchResult}</span> (total : {resultQuery}) </p>
             {result?.users.map((user, index) =>
-                <UserItem key={index} user={user} />
+                <ItemInsta key={index} user={user} />
             )}
         </div>
     )
 }
 
 interface Props {
-    result?: SearchRes
+    result?: InstaRes
     searchResult: string
     resultQuery?: string
 }
