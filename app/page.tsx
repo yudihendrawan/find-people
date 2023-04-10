@@ -1,9 +1,11 @@
 
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-
+import { Dancing_Script } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const dancing = Dancing_Script({ subsets: ['latin'] })
 
 export default function Home() {
   return (

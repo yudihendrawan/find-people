@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import './globals.css'
-// import './style.css'
+import Footer from '@/components/Footer'
+
 
 export const metadata = {
   title: {
@@ -17,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <head >
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body className='overflow-x-hidden'>
         <div className='mx-auto mb-28 lg:mb-24'>
           <Navigation />
         </div>
@@ -28,6 +29,13 @@ export default function RootLayout({
 
           {children}
         </div>
+
+        <footer className='w-full lg:w-11/12 lg:left-20 lg:right-20 mx-auto'>
+          <Footer />
+
+        </footer>
+
+
 
 
       </body>

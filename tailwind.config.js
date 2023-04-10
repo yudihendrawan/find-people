@@ -13,6 +13,9 @@ module.exports = {
     extend: {
       colors: {
         primary: '#01E1AB',
+      },
+      fontFamily: {
+        dancing: ['Dancing Script', 'cursive'],
       }
     },
   },
