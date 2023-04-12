@@ -1,5 +1,6 @@
 'use client'
 import DetailUser from '@/components/DetailUser'
+import RepoList from '@/components/RepoList'
 import { useState, useEffect } from 'react'
 
 export default function Detail({ params }: { params: { username: string } }) {
@@ -11,7 +12,9 @@ export default function Detail({ params }: { params: { username: string } }) {
         followers: 0,
         following: 0,
         html_url: '',
-        public_repos: 0
+        public_repos: 0,
+        repos_url: '',
+        login: ''
     })
 
     useEffect(() => {
@@ -23,11 +26,13 @@ export default function Detail({ params }: { params: { username: string } }) {
                 ...resData,
                 id: data.id,
                 avatar_url: data.avatar_url,
+                login: data.login,
                 name: data.name,
                 followers: data.followers,
                 following: data.following,
                 html_url: data.html_url,
-                public_repos: data.public_repos
+                public_repos: data.public_repos,
+                repos_url: data.repos_url
 
             })
 
@@ -36,7 +41,7 @@ export default function Detail({ params }: { params: { username: string } }) {
     }, [params.username])
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 lg:mx-auto lg:w-3/4 overflow-x-hidden'>
             <DetailUser
                 id={resData.id}
                 avatar_url={resData.avatar_url}
@@ -45,7 +50,12 @@ export default function Detail({ params }: { params: { username: string } }) {
                 following={resData.following}
                 html_url={resData.html_url}
                 public_repos={resData.public_repos}
+                login={resData.login}
             />
+            <div className='mt-14 ml-2'>
+                <p className='font-bold text-2xl'>🌐 List Repository Public</p>
+            </div>
+            <RepoList repos_url={resData.repos_url} />
             {/* <div>{data && JSON.stringify(data, null, 2)}</div> */}
         </div>
     )

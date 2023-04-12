@@ -29,7 +29,6 @@ export default function Github(): JSX.Element {
             search: search,
             users: users
           }
-          // console.log(data)
           console.log(searchRes.users)
           setResultQuery(JSON.stringify(data.total_count))
           setResult(searchRes)

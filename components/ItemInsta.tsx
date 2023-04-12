@@ -1,21 +1,29 @@
-import { UserInstagram } from '@/types/userGithub/User'
+// import { UserInstagram } from '@/types/userGithub/User'
+// import React from 'react'
+// import { ChevronRightIcon } from '@heroicons/react/24/solid'
+// import Image from 'next/image'
+// import Link from 'next/link'
+
+// export default function ItemInsta({ user }: Props) {
+//     return (
+//         <div className='flex justify-between items-center w-full hover:bg-zinc-100 px-4 py-5'>
+//             <div className='inline-flex items-center space-x-3'>
+//                 {/* <Image alt='avatar' width={40} height={40} src={user?.avatar_url} className='rounded-full' /> */}
+//                 <span>{user.username}</span>
+//             </div>
+//             {/* <span className=' hover:text-primary p-3'><Link href={`/github/${user.login}`}><ChevronRightIcon className='w-4 h-4' /></Link></span> */}
+//         </div >
+//     )
+// }
+
+// interface Props {
+//     user: UserInstagram
+// }
+
 import React from 'react'
-import { ChevronRightIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
-import Link from 'next/link'
 
-export default function ItemInsta({ user }: Props) {
+export default function ItemInsta() {
     return (
-        <div className='flex justify-between items-center w-full hover:bg-zinc-100 px-4 py-5'>
-            <div className='inline-flex items-center space-x-3'>
-                {/* <Image alt='avatar' width={40} height={40} src={user?.avatar_url} className='rounded-full' /> */}
-                <span>{user.username}</span>
-            </div>
-            {/* <span className=' hover:text-primary p-3'><Link href={`/github/${user.login}`}><ChevronRightIcon className='w-4 h-4' /></Link></span> */}
-        </div >
+        <div>ItemInsta</div>
     )
-}
-
-interface Props {
-    user: UserInstagram
 }
