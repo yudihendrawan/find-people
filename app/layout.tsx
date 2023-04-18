@@ -21,11 +21,11 @@ export default function RootLayout({
       <head >
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className='overflow-x-hidden'>
+      <body >
         <div className='mx-auto mb-28 lg:mb-24'>
           <Navigation />
         </div>
-        <div className='min-h-screen w-screen bg-white justify-center flex'>
+        <div className='min-h-screen w-full bg-white justify-center flex'>
 
           {children}
         </div>

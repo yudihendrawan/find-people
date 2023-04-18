@@ -66,7 +66,7 @@ export default function Navigation() {
 
 
     return (
-        <header className={`border-b border-zinc-200 lg:container w-full lg:left-20 lg:right-20 backdrop-filter backdrop-blur-lg bg-transparent fixed z-10 transition overflow-x-hidden px-4 ease-in-out duration-500 top-0 ${animateHeader && "shadow-md"}`}>
+        <header className={`border-b border-zinc-200 md:w-[90%] md:left-[5%] w-full backdrop-filter backdrop-blur-lg bg-transparent fixed z-10 transition px-4 ease-in-out duration-500 top-0 ${animateHeader && "shadow-md"}`}>
             <div className='flex items-center relative justify-between xl:max-w-7xl xl:mx-auto max-w-full flex-wrap w-full'>
                 <Image className='ml-8 lg:ml-0' src="/img/logo/logoRemoveBg.png" alt='Img' width={110} height={110} />
                 <div className='cursor-pointer lg:hidden block mr-8 lg:mr-0' onClick={() => buka()}>
