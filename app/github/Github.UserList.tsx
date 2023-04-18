@@ -1,7 +1,7 @@
-import { SearchRes } from '@/types/userGithub/SearchRes'
-import { UserGithub } from '@/types/userGithub/User'
+import { SearchRes } from '@/types/userGithub/Github.SearchRes'
+import { UserGithub } from '@/types/userGithub/Github.User'
 import React from 'react'
-import UserItem from './UserItem'
+import UserItem from './Github.UserItem'
 
 export default function UserList({ result, searchResult, resultQuery }: Props) {
     return (

@@ -1,22 +1,20 @@
 'use client'
-import React, { useState } from "react";
+import Banner from "@/components/Banner";
+import Button from "@/components/Button";
+import FormSearch from "@/components/FormSearch";
+import { InstagramRes } from "@/types/userInstagram/Instagram.SearchRes";
+import { UserInstagram } from "@/types/userInstagram/Instagram.User";
+import React, { use, useState } from "react";
+import UserList from "./Instagram.UserList";
 
-interface User {
-  position: number;
-  user: {
-    username: string;
-    full_name: string;
-  };
-}
 
-interface InstagramResponse {
-  users: User[];
-}
 
 export default function Instagram() {
+  const [resultInfo, setResultInfo] = useState(false)
+  const [searchResult, setSearchResult] = useState('')
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [userList, setUserList] = useState<User[]>([]);
+  const [userList, setUserList] = useState<UserInstagram[]>([]);
 
   const onSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,47 +29,32 @@ export default function Instagram() {
       };
       fetch(`https://instagram191.p.rapidapi.com/search/?query=${search}`, options)
         .then((response) => response.json())
-        .then((data: InstagramResponse) => {
+        .then((data: InstagramRes) => {
           if (data && data.users && data.users.length > 0) {
             setUserList(data.users);
           }
-          setIsLoading(false);
         })
         .catch((err) => {
           console.error(err);
           setIsLoading(false);
-        });
+        })
+        .finally(() => {
+          setIsLoading(false);
+          setResultInfo(true)
+          setSearchResult(search)
+          setSearch('')
+        })
     }
   };
 
   return (
-    <div className="justify-center space-y-3 mt-10 lg:flex lg:w-[500px] lg:items-center lg:flex-col items-center">
-      <form className="flex place-self-center w-full mx-auto" onSubmit={onSearchSubmit}>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full h-12 px-3 rounded-md shadow-inner text-xl font-bold"
-          placeholder="Search Instagram"
-        />
-        <button
-          type="submit"
-          className="ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          disabled={isLoading}
-        >
-          {isLoading ? "Loading..." : "Search"}
-        </button>
+    <div className="justify-center space-y-3 mt-10 lg:flex lg:w-[500px] lg:items-center lg:flex-col items-center mb-10">
+      <Banner title="Instagram" logo="/img/banner/instagram.svg" size='lg:h-28 lg:w-28 h-24 w-24' />
+      <form className='flex place-self-center w-full mx-auto ' onSubmit={onSearchSubmit}>
+        <FormSearch value={search} onChange={(e) => setSearch(e.target.value)} />
+        <Button type="submit" isLoading={isLoading} />
       </form>
-      <div className="border shadow-md rounded-md w-full py-10">
-        <ul>
-          {userList.map((user, index) => (
-            <li key={index}>
-              <div>Username: {user.user.username}</div>
-              <div>Full name: {user.user.full_name}</div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {resultInfo ? <UserList userList={userList} searchResult={searchResult} /> : ""}
     </div>
   );
 }

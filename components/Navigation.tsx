@@ -66,7 +66,7 @@ export default function Navigation() {
 
 
     return (
-        <header className={`border-b border-zinc-200 w-full lg:w-11/12 lg:left-20 lg:right-20 backdrop-filter backdrop-blur-lg bg-transparent fixed z-10 transition ease-in-out duration-500 top-0 ${animateHeader && "shadow-md"}`}>
+        <header className={`border-b border-zinc-200 lg:container w-full lg:left-20 lg:right-20 backdrop-filter backdrop-blur-lg bg-transparent fixed z-10 transition overflow-x-hidden px-4 ease-in-out duration-500 top-0 ${animateHeader && "shadow-md"}`}>
             <div className='flex items-center relative justify-between xl:max-w-7xl xl:mx-auto max-w-full flex-wrap w-full'>
                 <Image className='ml-8 lg:ml-0' src="/img/logo/logoRemoveBg.png" alt='Img' width={110} height={110} />
                 <div className='cursor-pointer lg:hidden block mr-8 lg:mr-0' onClick={() => buka()}>
@@ -81,7 +81,7 @@ export default function Navigation() {
                 </div>
 
 
-                <nav ref={menuRef} className={`${open ? " flex absolute lg:relative items-center" : "hidden"} ' bg-transparent shadow-md lg:shadow-none justify-center rounded-md py-5 w-1/6 right-0 max-w-[250px] min-w-[150px] lg:max-w-full top-full lg:flex lg:items-center lg:w-auto`} >
+                <nav ref={menuRef} className={`${open ? " flex absolute lg:relative items-center" : "hidden"} ' bg-white shadow-md lg:shadow-none justify-center rounded-md py-5 w-1/6 right-0 max-w-[250px] min-w-[150px] lg:max-w-full top-full lg:flex lg:items-center lg:w-auto`} >
                     <ul className='text-base text-gray-600 lg:flex lg:justify-between lg:text-md'  >
 
                         {navLink.map(({ link, name }) => (

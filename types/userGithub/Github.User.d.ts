@@ -6,7 +6,3 @@ export type UserGithub = {
 
 }
 
-export type UserIg = {
-    username: string;
-    full_name: string;
-}

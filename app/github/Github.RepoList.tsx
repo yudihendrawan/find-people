@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SearchRes } from '@/types/userGithub/SearchRes'
+import { SearchRes } from '@/types/userGithub/Github.SearchRes'
 import Link from 'next/link'
 
 export default function RepoList({ repos_url }: Props) {

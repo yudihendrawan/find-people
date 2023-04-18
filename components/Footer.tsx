@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="bg-zinc-200 py-2 text-center text-neutral-700 ">
-                <p>dibuat dengan ❤️<Link href="https://yudihendrawan.vercel.app/"> <span className='font-dancing  bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:text-purple-500 text-xl'>Yudi Hendrawan</span></Link></p>
+                <p>dibuat dengan ❤️<Link href="https://yudihendrawan.com" target='_blank'> <span className='font-dancing  bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:text-purple-500 text-xl'>Yudi Hendrawan</span></Link></p>
             </div>
         </div>
     )

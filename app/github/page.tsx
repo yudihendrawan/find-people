@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import FormSearch from '@/components/FormSearch'
 import Button from '@/components/Button'
-import UserList from '@/components/UserList'
+import UserList from '@/app/github/Github.UserList'
 import Banner from '@/components/Banner'
-import { UserGithub } from '@/types/userGithub/User'
-import { SearchRes } from '@/types/userGithub/SearchRes'
+import { UserGithub } from '@/types/userGithub/Github.User'
+import { SearchRes } from '@/types/userGithub/Github.SearchRes'
 
 
 
@@ -29,7 +29,6 @@ export default function Github(): JSX.Element {
             search: search,
             users: users
           }
-          console.log(searchRes.users)
           setResultQuery(JSON.stringify(data.total_count))
           setResult(searchRes)
         }).finally(() => {

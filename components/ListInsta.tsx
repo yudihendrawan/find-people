@@ -1,5 +1,5 @@
-import { InstaRes } from '@/types/userGithub/SearchRes'
-import { UserInstagram } from '@/types/userGithub/User'
+import { InstaRes } from '@/types/userGithub/Github.SearchRes'
+import { UserInstagram } from '@/types/userGithub/Github.User'
 import React from 'react'
 import ItemInsta from './ItemInsta'
 
