@@ -1,12 +1,12 @@
 import React from 'react'
 import UserItem from './Instagram.UserItem'
-import { UserInstagram } from '@/types/userInstagram/Instagram.User'
+import { InstagramEnpoint } from '@/types/userInstagram/Instagram.SearchRes'
 
-export default function UserList({ userList, searchResult }: Props) {
+export default function UserList({ result, searchResult }: Props) {
     return (
         <div className='border shadow-md rounded-md w-full py-10' >
             <p className='text-center p-3' >Hasil Pencarian : {searchResult}</p>
-            {userList?.map((user, index) =>
+            {result?.users?.map((user, index) =>
                 <UserItem key={index} user={user} />
             )}
         </div>
@@ -14,7 +14,7 @@ export default function UserList({ userList, searchResult }: Props) {
 }
 
 interface Props {
-    userList?: UserInstagram[]
+    result?: InstagramEnpoint
     searchResult: string
 }
 

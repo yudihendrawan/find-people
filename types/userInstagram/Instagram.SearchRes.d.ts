@@ -1,6 +1,10 @@
-import { UserInstagram } from "./Instagram.User"
+import { UserDetail, UserInstagram } from "./Instagram.User"
 
-
-export type InstagramRes = {
+export type InstagramEnpoint = {
     users: UserInstagram[]
+    search: string
+}
+
+export type UserDetailEnpoints = {
+    users: UserDetail[]
 }

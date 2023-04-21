@@ -1,6 +1,6 @@
 'use client'
-import DetailUser from '@/app/github/Github.DetailUser'
-import RepoList from '@/app/github/Github.RepoList'
+import DetailUser from './Github.DetailUser'
+import RepoList from './Github.RepoList'
 import { useState, useEffect } from 'react'
 
 export default function Detail({ params }: { params: { username: string } }) {

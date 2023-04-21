@@ -6,7 +6,7 @@ export default function DetailUser({ id, avatar_url, name, followers, following,
         <div className='flex w-full'>
             <div className='flex space-x-4 lg:space-x-8 lg:w-1/2'>
                 <div>
-                    <Image className='rounded-full ml-2 w-28 h:28 lg:w-50 lg:h-50' src={avatar_url} alt='avatar' width={100} height={100} />
+                    <Image priority={true} className='rounded-full ml-2 w-28 h:28 lg:w-50 lg:h-50' src={avatar_url} alt='avatar' width={100} height={100} />
                 </div>
                 <div className='flex flex-col'>
                     <div className='flex justify-between'>
