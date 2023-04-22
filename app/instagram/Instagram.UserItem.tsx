@@ -20,9 +20,6 @@ export default function UserItem({ user }: Props) {
 
 
             </div>
-            {/* <div className='w-20' >
-                <Link href={user.user.profile_pic_url} target='_blank' ><p className='font-bold text-sm text-cyan-700 hover:text-cyan-900 hover:text-clip ' >Lihat foto profile</p></Link>
-            </div> */}
             <div className='w-10'>
                 {user.user.is_private ? <LockClosedIcon className='w-4 h-4' /> : ""}
             </div>

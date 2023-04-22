@@ -81,7 +81,7 @@ export default function Navigation() {
                 </div>
 
 
-                <nav ref={menuRef} className={`${open ? " flex absolute lg:relative items-center" : "hidden"} ' bg-white shadow-md lg:shadow-none justify-center rounded-md py-5 w-1/6 right-0 max-w-[250px] min-w-[150px] lg:max-w-full top-full lg:flex lg:items-center lg:w-auto`} >
+                <nav ref={menuRef} className={`${open ? " flex absolute lg:relative lg:bg-transparent items-center" : "hidden"} ' bg-white lg:bg-transparent shadow-md lg:shadow-none justify-center rounded-md py-5 w-1/6 right-0 max-w-[250px] min-w-[150px] lg:max-w-full top-full lg:flex lg:items-center lg:w-auto`} >
                     <ul className='text-base text-gray-600 lg:flex lg:justify-between lg:text-md'  >
 
                         {navLink.map(({ link, name }) => (

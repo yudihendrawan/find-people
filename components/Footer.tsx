@@ -1,6 +1,14 @@
+import { CalendarDays } from "lucide-react"
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
 import React from 'react'
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
 
 
 export default function Footer() {
@@ -19,9 +27,35 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="bg-zinc-200 py-2 text-center text-neutral-700 ">
-                <p>dibuat dengan ❤️<Link href="https://yudihendrawan.com" target='_blank'> <span className='font-dancing  bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:text-purple-500 text-xl'>Yudi Hendrawan</span></Link></p>
-            </div>
+            <HoverCard>
+                <div className="bg-zinc-200 py-2 text-center text-neutral-700 ">
+                    <p>dibuat dengan ❤️
+                        <HoverCardTrigger asChild >
+                            <Link href="https://yudihendrawan.com" target='_blank'> <span className='font-dancing  bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:text-purple-500 text-xl'>Yudi Hendrawan</span></Link>
+                        </HoverCardTrigger>
+                        <HoverCardContent className="w-80 text-left">
+                            <div className="flex justify-between space-x-4">
+                                <Avatar>
+                                    <AvatarImage src="/img/avatar/yudi.jpg" />
+                                    <AvatarFallback>YH</AvatarFallback>
+                                </Avatar>
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-semibold">@yudihendrawan</h4>
+                                    <p className="text-sm">
+                                        Find People – created and maintained by @yudihendrawan.
+                                    </p>
+                                    <div className="flex items-center pt-2">
+                                        <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{" "}
+                                        <span className="text-xs text-muted-foreground">
+                                            2023
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </HoverCardContent>
+                    </p>
+                </div>
+            </HoverCard>
         </div>
     )
 }
