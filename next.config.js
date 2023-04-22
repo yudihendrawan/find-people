@@ -4,7 +4,13 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['avatars.githubusercontent.com']
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+    // domains: ['avatars.githubusercontent.com', 'res.cloudinary.com']
   }
 }
 
