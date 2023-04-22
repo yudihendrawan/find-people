@@ -5,7 +5,7 @@ import React from 'react'
 export default function MediaList({ media }: Props) {
     return (
         <div className='border border-zinc-200 mx-2 lg:w-11/12 shadow-sm rounded-lg justify-center mt-3 mb-10'>
-            <div className='grid gap-1 p-3 lg:grid-cols-3 grid-cols-2'>
+            <div className='grid gap-2 p-3 lg:gap-2 xl:gap-0 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 grid-cols-2'>
                 {media ? media.map(m => (
                     <MediaUserDetailList
                         key={m.node.id}

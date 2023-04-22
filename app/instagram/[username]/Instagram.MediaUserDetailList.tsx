@@ -12,11 +12,11 @@ import Link from 'next/link'
 
 export default function MediaUserDetailList({ video_url, caption, is_video, id, display_url, username }: Props) {
   return (
-    <div className='w-full'>
+    <div className='w-full mb-2 lg:mb-4'>
       <HoverCard>
         <div>
           <HoverCardTrigger asChild>
-            <Image className='object-cover h-40 lg:h-48' src={display_url} alt='Media User' height={250} width={250} />
+            <Image className='object-cover h-40 lg:h-52' src={display_url} alt='Media User' height={250} width={250} />
           </HoverCardTrigger>
           <HoverCardContent className='w-80'>
             <div className='flex p-2'>
