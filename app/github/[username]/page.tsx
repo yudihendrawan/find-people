@@ -56,7 +56,6 @@ export default function Detail({ params }: { params: { username: string } }) {
                 <p className='font-bold text-2xl'>🌐 List Repository Public</p>
             </div>
             <RepoList repos_url={resData.repos_url} />
-            {/* <div>{data && JSON.stringify(data, null, 2)}</div> */}
         </div>
     )
 }

@@ -15,7 +15,6 @@ export default function Instagram() {
   const [searchResult, setSearchResult] = useState('')
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  // const [userList, setUserList] = useState<UserInstagram[]>([]);
   const [result, setResult] = useState<InstagramEnpoint | null>(null);
 
 

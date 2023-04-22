@@ -43,11 +43,8 @@ export default function Detail({ params }: { params: { username: string } }) {
                 count: media.count,
                 edges: resMedia
             }
-            // const resCaption: Caption[] = data.data.user.edge_owner_to_timeline_media.edges
             setResDataUser(endPointsUserDetail);
             setResDataMedia(endPointsUserMedia);
-            console.log({ resMedia })
-            // console.log({ resCaption })
         }
         getData()
     }, [params.username])
