@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
-
+import { usePathname } from 'next/navigation'
+import { useToast } from './ui/use-toast'
 export default function Navigation() {
 
+    const { toast } = useToast()
     const [animateHeader, setAnimateHeader] = useState(false)
     const [open, setOpen] = useState(false)
     const pathname = usePathname()
@@ -37,7 +38,6 @@ export default function Navigation() {
             window.removeEventListener("scroll", listener)
         }
     }, []);
-
 
 
     const navLink = [
@@ -77,7 +77,6 @@ export default function Navigation() {
                         <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                     </svg>
 
-
                 </div>
 
 
@@ -89,7 +88,8 @@ export default function Navigation() {
                                 <Link
                                     key={name}
                                     href={link}
-                                    className={`${pathname === link ? "lg:px-5 py-2 hover:text-primary font-semibold block text-primary" : "lg:px-5 py-2 hover:text-primary font-semibold block"}`}>
+                                    className={`${pathname === link ? "lg:px-5 py-2 hover:text-primary font-semibold block text-primary" : "lg:px-5 py-2 hover:text-primary font-semibold block"}`}
+                                >
                                     {name}
                                 </Link>
                             </li>

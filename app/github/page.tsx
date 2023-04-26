@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import FormSearch from '@/components/FormSearch'
-import Button from '@/components/Button'
+import Button from '@/components/ButtonCustom'
 import UserList from '@/app/github/Github.UserList'
 import Banner from '@/components/Banner'
 import { UserGithub } from '@/types/userGithub/Github.User'

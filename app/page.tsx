@@ -1,7 +1,8 @@
 
 import { Inter } from 'next/font/google'
-import Link from 'next/link'
 import { Dancing_Script } from 'next/font/google'
+import Header from './home/Home.Header'
+import Hero from './home/Home.Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,19 +13,11 @@ export default function Home() {
 
     <div>
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="flex flex-col items-center justify-center py-2">
-          <p className='text-primary text-2xl font-bold'>Halaman Home</p>
-          <div className='h-96'>Halaman Home 1</div>
-          <div className='h-96'>Halaman Home 2</div>
-          <div className='h-96'>Halaman Home 3</div>
-          <div className='h-96'>Halaman Home 4</div>
-          <div className='h-96'>Halaman Home 5</div>
-          <div className='h-96'>Halaman Home 6</div>
-          <div className='h-96'></div>
-          <div className='h-96'></div>
-          <div className='h-96'></div>
-          <div className='h-96'></div>
-          <div className='h-96'></div>
+        <Header />
+        <div className='mt-10 space-y-10 md:space-y-0 md:flex md:items-start'>
+          <Hero src='./img/banner/instagram.svg' href='/instagram' title='Mencari user Instagram' description='Kamu dapat kepoin si dia loohh' />
+          <Hero src='./img/banner/facebook.svg' href='/facebook' title='Mencari User Facebook' description='Walaupun sudah jarang dipake tetapi tetap ingin mencari orangnya' />
+          <Hero src='./img/banner/github.svg' href='/github' title='Mencari User Github' description='Tempat yang tepat untuk mencari user github' />
         </div>
       </div>
     </div>
