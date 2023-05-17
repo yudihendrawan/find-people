@@ -17,28 +17,27 @@ export default function Detail({ params }: { params: { username: string } }) {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': 'c15588ba28msh2dd4d58ddace11bp1791d5jsn8ea1017aa3e4',
-                    'X-RapidAPI-Host': 'instagram-data12.p.rapidapi.com'
+                    'X-RapidAPI-Key': 'e76efd42f7msh1e6ad3422f4fd08p145587jsne1d97f5997b3',
+                    'X-RapidAPI-Host': 'instagram-looter2.p.rapidapi.com'
                 }
             };
-            const res = await fetch(`https://instagram-data12.p.rapidapi.com/user/details-by-username/?username=${params.username}`, options)
+            const res = await fetch(`https://instagram-looter2.p.rapidapi.com/profile?username=${params.username}`, options)
             const data = await res.json()
-            const user = data.data.user
-            const media = data.data.user.edge_owner_to_timeline_media
+            const media = data.edge_owner_to_timeline_media
             const endPointsUserDetail: UserDetail = {
-                biography: user.biography,
-                id: user.id,
-                category_name: user.category_name,
-                edge_followed_by: user.edge_followed_by.count,
-                edge_follow: user.edge_follow.count,
-                profile_pic_url: user.profile_pic_url,
-                full_name: user.full_name,
-                username: user.username,
-                is_private: user.is_private,
-                is_verified: user.is_verified,
-                media_count: user.edge_owner_to_timeline_media.count
+                biography: data.biography,
+                id: data.id,
+                category_name: data.category_name,
+                edge_followed_by: data.edge_followed_by.count,
+                edge_follow: data.edge_follow.count,
+                profile_pic_url: data.profile_pic_url,
+                full_name: data.full_name,
+                username: data.username,
+                is_private: data.is_private,
+                is_verified: data.is_verified,
+                media_count: data.edge_owner_to_timeline_media.count
             }
-            const resMedia: MediaUserDetail[] = data.data.user.edge_owner_to_timeline_media.edges
+            const resMedia: MediaUserDetail[] = data.edge_owner_to_timeline_media.edges
             const endPointsUserMedia: MediaUser = {
                 count: media.count,
                 edges: resMedia

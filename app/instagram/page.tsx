@@ -25,11 +25,11 @@ export default function Instagram() {
       const options = {
         method: "GET",
         headers: {
-          'X-RapidAPI-Key': 'c15588ba28msh2dd4d58ddace11bp1791d5jsn8ea1017aa3e4',
-          'X-RapidAPI-Host': 'instagram-data12.p.rapidapi.com'
+          'X-RapidAPI-Key': 'e76efd42f7msh1e6ad3422f4fd08p145587jsne1d97f5997b3',
+          'X-RapidAPI-Host': 'instagram-looter2.p.rapidapi.com'
         },
       };
-      fetch(`https://instagram-data12.p.rapidapi.com/search/?query=${search}`, options)
+      fetch(`https://instagram-looter2.p.rapidapi.com/search?query=${search}`, options)
         .then((response) => response.json())
         .then((data: InstagramRes) => {
           const searchRes: InstagramEnpoint = {

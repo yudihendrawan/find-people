@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body >
-        <div className='mx-auto mb-28 lg:mb-24'>
+        <div className='mx-auto mb-24 lg:mb-24'>
           <Navigation />
         </div>
         <div className='min-h-screen w-full bg-white justify-center flex'>
@@ -32,7 +32,6 @@ export default function RootLayout({
 
         <footer className='w-full lg:w-11/12 lg:left-20 lg:right-20 mx-auto'>
           <Footer />
-
         </footer>
 
       </body>

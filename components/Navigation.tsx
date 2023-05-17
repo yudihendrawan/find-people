@@ -50,10 +50,6 @@ export default function Navigation() {
             link: '/instagram',
         },
         {
-            name: 'Facebook',
-            link: '/facebook',
-        },
-        {
             name: 'Github',
             link: '/github',
         },
