@@ -13,10 +13,10 @@ export default function Home() {
 
     <div>
       <div className="relative py-3 w-full sm:max-w-full sm:mx-auto">
-        <h2 className="pt-40 mb-1 text-2xl font-semibold tracking-tighter text-center text-gray-800 lg:text-7xl md:text-6xl">
+        <h2 className="md:pt-28 pt-16 mb-1 text-5xl font-semibold tracking-tighter text-center text-gray-800 lg:text-7xl md:text-6xl">
           Selamat datang.
         </h2>
-        <p className="mx-auto text-xl text-center text-gray-900 font-normal mt-3 lg:w-2/3">
+        <p className=" p-2 md:py-1 mx-auto text-xl text-center text-gray-900 font-normal mt-3 lg:w-2/3">
           Temukan informasi terkini tentang pengguna Instagram dan GitHub dengan mudah di sini.
         </p>
         <div className="pt-12 pb-24 grid md:grid-cols-2 md:gap-10 gap-5 max-w-4xl mx-auto md:px-1 px-3">
