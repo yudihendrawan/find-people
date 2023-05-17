@@ -17,7 +17,7 @@ export default function Detail({ params }: { params: { username: string } }) {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '34772bbe2emsh0f9ee5152d53e02p111b71jsnb615425fb4e5',
+                    'X-RapidAPI-Key': 'e76efd42f7msh1e6ad3422f4fd08p145587jsne1d97f5997b3',
                     'X-RapidAPI-Host': 'instagram-looter2.p.rapidapi.com'
                 }
             };
