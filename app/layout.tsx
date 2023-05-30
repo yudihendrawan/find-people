@@ -19,6 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head >
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4767602423321391"
+          crossOrigin="anonymous"></script>
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body >
