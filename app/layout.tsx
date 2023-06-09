@@ -21,7 +21,7 @@ export default function RootLayout({
       <head >
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4767602423321391"
           crossOrigin="anonymous"></script>
-        <script async src="https://umami-yh.vercel.app/script.js" data-website-id="ecf67ce5-02d5-4b0c-9147-18951b2d27d1"></script>
+        <script async src="https://umami.ystudio.dev/script.js" data-website-id="ecf67ce5-02d5-4b0c-9147-18951b2d27d1"></script>
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body >
